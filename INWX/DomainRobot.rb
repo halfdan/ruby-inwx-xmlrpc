@@ -7,8 +7,8 @@ Created on 2010/03/20
 DomainRobot API interface
 =end
 
-require "XMLRPC/Client"
-require "Digest/SHA2"
+require "xmlrpc/client"
+require "digest/sha2"
 
 module INWX
   class DomainRobot
