@@ -40,10 +40,10 @@ module INWX
       params.merge! :user => self.username
      
       # Create a new client instance
-      client = XMLRPC::Client.new(self.address, "/xmlrpc/" + object, "443", nil, nil, nil, nil, true, 900)
+      client = XMLRPC::Client.new(self.address, "/xmlrpc/", "443", nil, nil, nil, nil, true, 900)
       
       # Call the remote method
-      client.call(method, params)
+      client.call(object+"."+method, params)
     end
   end
 end
